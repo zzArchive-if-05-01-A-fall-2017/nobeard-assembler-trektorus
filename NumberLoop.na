@@ -1,0 +1,39 @@
+"Enter a number:"
+
+#reserve space for variables
+inc 8
+
+#store 1 in variable
+la 0 12
+lit 1
+sto
+
+#print "enter a number"
+lit 0
+lit 16
+lit 17
+out 2
+
+#store number
+la 0 16
+la 0 20
+in 0
+
+#add 1 to current number as long as the stored max number isn't reached
+.operation
+
+lv 0 12
+lit 4
+out 0
+la 0 12
+lv 0 12
+lit 1
+add
+sto
+lv 0 12
+lv 0 16
+rel 1
+
+tjmp .operation
+
+halt

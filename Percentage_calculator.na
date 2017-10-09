@@ -1,0 +1,50 @@
+"Bitte maximale Punkteanzahl angeben:Bitte aktuelle Punkteanzahl angeben:Ergebnis in %:"
+
+#reserve space for variables
+inc 12
+
+#print maximum point string
+lit 0
+lit 36
+lit 37
+out 2
+
+#store maximum points
+la 0 10
+la 0 11
+in 0
+
+#Print "Bitte aktuelle Punkteanzahl angeben"
+lit 36
+lit 36
+lit 37
+out 2
+
+#store current points
+la 0 20
+la 0 21
+in 0
+
+#print "ergebnis in %"
+lit 72
+lit 14
+lit 15
+out 2
+
+#add numbers
+la 0 30
+lv 0 20
+lit 100
+mul
+lv 0 10
+div
+sto
+
+#print res
+lv 0 30
+lit 1
+out 0
+out 3
+
+halt
+
