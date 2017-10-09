@@ -1,0 +1,102 @@
+"Enter a number:Error:Number is too small"
+
+#reserve space
+inc 20
+
+#print "Enter a number:"
+lit 0
+lit 15
+lit 16
+out 2
+
+#read number
+la 0 12
+la 0 16
+in 0
+
+lv 0 12
+lit 0
+rel 1
+tjmp .end
+
+#set first prime number
+la 0 20
+lit 2
+sto
+
+.loop
+lv 0 12
+lv 0 20
+mod
+lit 0
+rel 3
+tjmp .loopsecond
+
+la 0 12
+lv 0 12
+lv 0 20
+div
+sto
+
+lv 0 20
+lit 1
+out 0
+out 3
+
+lv 0 12
+lit 1
+rel 5
+tjmp .loop
+
+halt
+
+.loopsecond
+la 0 20
+lv 0 20
+lit 1
+add
+sto
+la 0 24
+lit 1
+sto
+.loopthird
+la 0 24
+lv 0 24
+lit 1
+add
+sto
+
+la 0 28
+lv 0 20
+lv 0 24
+mod
+sto
+lv 0 28
+lit 0
+rel 2
+tjmp .loopsecond
+
+la 0 32
+lv 0 20
+lit 2
+div
+sto
+
+lv 0 24
+lit 1
+add
+lv 0 32
+rel 0
+tjmp .loopthird
+
+jmp .loop
+
+.end
+lit 15
+lit 25
+lit 26
+out 2
+out 3
+
+halt
+

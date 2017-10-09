@@ -1,0 +1,11 @@
+"HelloWorld"
+lit 0
+lit 5
+lit 6
+out 2
+lit 5
+lit 5
+lit 5
+out 2
+out 3
+halt

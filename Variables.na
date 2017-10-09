@@ -1,0 +1,41 @@
+"Enter an int:You entered:Read operation sccessful?Input is not a number"
+inc 8
+
+lit 0
+lit 13
+lit 14
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+lv 0 36
+lit 0
+rel 2
+tjmp .error
+
+lit 13
+lit 12
+lit 13
+out 2
+lv 0 32
+lit 1
+out 0
+out 3
+jmp .end
+
+.error
+lit 50
+lit 21
+lit 21
+out 2
+out 3
+lv 0 36
+lit 1
+out 0
+out 3
+
+.end
+
+halt
